@@ -31,8 +31,8 @@
 
 [push]
     default = simple
-    gpgSign = true
     followTags = true
+    # gpgSign = true # GitHub dislike GPG signed push
 
 [include]
     path = ~/.gitconfig.local # local configs
