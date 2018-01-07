@@ -1,0 +1,23 @@
+#!/usr/bin/env bash
+# http://www.gnu.org/software/bash/manual/html_node/The-Shopt-Builtin.html
+
+shopt -s login_shell
+shopt -s checkwinsize
+shopt -s checkjobs # check for stopped, pending jobs before exit
+
+shopt -s histappend
+shopt -s cmdhist # append multiline command to the same history entry
+shopt -s lithist
+
+shopt -s no_empty_cmd_completion
+
+shopt -s cdable_vars # enable cd to path provided by var
+shopt -s cdspell     # correct minor spell errors
+shopt -s autocd
+
+shopt -s direxpand
+shopt -s dirspell
+
+shopt -s dotglob
+shopt -s extglob
+shopt -s nocaseglob

@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+# https://ss64.com/bash/syntax-inputrc.html
+
+set bell-style none
+set editing-mode vi
+
+set mark-symlinked-directories on
+
+set completion-ignore-case on
+set show-all-if-ambiguous on
+
+set page-completions off
+
+# Enable UTF-8 support
+set input-meta on
+set output-meta on
+
+"\e[A": history-search-backward
+"\e[B": history-search-forward

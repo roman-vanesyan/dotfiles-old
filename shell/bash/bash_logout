@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+# Clean up screen, when exit console
+if [ "$SHLVL" == 1 ]; then
+    if [ -x /usr/bin/clear_console ]; then
+        /usr/bin/clear_console -q
+    fi
+fi

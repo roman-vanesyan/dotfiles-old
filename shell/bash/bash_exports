@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+
+export HISTSIZE=50000
+export HISTFILESIZE=50000
+export HISTIGNORE='&:[bf]g:c:clear:history:exit:q:pwd:* --help'
+export HISTCONTROL=ignoreboth # ignore duplicates
+
+# Make new shells get history from all previous
+export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
+
+export MANPAGER='less -x' # do not clear screen after quit man
+
+export NODE_REPL_HISTORY_SIZE=50000
+export NODE_REPL_MODE='strict'
+
+# Allow install npm commands without sudo
+export PATH="$PATH:$HOME/.yarn/bin"    # Yarn
+export PATH="$PATH:$HOME/.npm-pkg/bin" # npm
+export MANPATH="$(manpath):$HOME/.npm-pkg/share/man"

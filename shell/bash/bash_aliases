@@ -1,0 +1,27 @@
+#!/usr/bin/env bash
+
+alias sudo='sudo '
+alias o='xdg-open'        # open program
+alias q='sudo killall -q' # close program
+
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias ~='cd ~'
+alias -- -='cd -'
+
+alias eth-ip='ifconfig | \
+              grep "inet addr" | \
+              grep -v "127.0.0.1" | \
+              cut -d: -f2 | \
+              cut -d" " -f1'
+alias www-ip='dig +short myip.opendns.com @resolver1.opendns.com'
+
+alias afk='gnome-screensaver-command --lock' # lock screen
+
+if [ $(type -P apt) &> /dev/null ]; then
+    alias apti='sudo apt install'
+    alias aptr='sudo apt remove'
+    alias apt-update='sudo apt update'
+    alias apt-upgrade='sudo apt upgrade'
+    alias aptu='apt-update && apt-upgrade'
+fi

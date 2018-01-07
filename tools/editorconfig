@@ -1,0 +1,19 @@
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+insert_final_newline = true
+max_line_length = 80
+tab_width = 4
+trim_trailing_whitespace = true
+
+
+[Makefile]
+indent_style = tab
+
+[*.{md,markdown}]
+# Markdown has sensible whitespace
+trim_trailing_whitespace = false
+
+[*.{js,ts,tsx,json,yaml,css,html}]
+tab_width = 2

@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# http://tldp.org/LDP/Bash-Beginners-Guide/html
+
+if [[ -f '/etc/bash_completion' ]] && ! shopt -oq posix; then
+    source '/etc/bash_completion'
+fi
+
+main()
+{
+    local _file=''
+    local _idx=''
+
+    declare -r -a _files=(
+        '.bash_options'
+        '.bash_exports'
+        '.bash_aliases'
+        '.bash_prompt'
+        '.bash_logout'
+        '.bash_profile.local' # local configs
+    )
+
+    for _idx in ${!_files[*]}; do
+        _file="$HOME/${_files[$_idx]}"
+        if [[ -r $_file ]]; then
+            source $_file
+        fi
+    done
+}
+
+main
+unset -f main
+clear

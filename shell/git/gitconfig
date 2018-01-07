@@ -1,0 +1,53 @@
+# https://git-scm.com/docs/git-config
+
+[user]
+    useConfigOnly = true # don't guess my identity
+
+[apply]
+    whitespace = fix
+
+[core]
+    excludesfile = ~/.gitignore
+    attributesfile = ~/.gitattributes
+
+    untrackedCache = true
+    whitespace = space-before-tab,trailing-space
+
+[color]
+    ui = auto
+
+[commit]
+    # https://help.github.com/articles/signing-commits-using-gpg
+    gpgSign = true
+
+[diff]
+    renames = copies
+
+[help]
+    autoCorrect = 1
+
+[merge]
+    log = true
+
+[push]
+    default = simple
+    gpgSign = true
+    followTags = true
+
+[include]
+    path = ~/.gitconfig.local # local configs
+
+[url "git@bitbucket.org"]
+    insteadOf = bitbucket:
+    pushInsteadOf = git://bitbucket.org/
+    pushInsteadOf = https://bitbucket.org/
+
+[url "git@github.com:"]
+    insteadOf = gh:
+    pushInsteadOf = git://github.com/
+    pushInsteadOf = https://github.com/
+
+[url "git@gist.github.com:"]
+    insteadOf = gist:
+    pushInsteadOf = git://gist.github.com/
+    pushInsteadOf = https://gist.github.com/
