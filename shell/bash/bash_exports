@@ -8,8 +8,7 @@ export HISTCONTROL=ignoreboth # ignore duplicates
 
 # Make new shells get history from all previous
 export PROMPT_COMMAND="history -a; $PROMPT_COMMAND"
-
-export MANPAGER='less -x' # do not clear screen after quit man
+export MANPAGER='less -X' # do not clear screen after quit man
 
 export NODE_REPL_HISTORY_SIZE=50000
 export NODE_REPL_MODE='strict'
