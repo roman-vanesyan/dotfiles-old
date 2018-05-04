@@ -2,7 +2,7 @@
 # https://ss64.com/bash/syntax-inputrc.html
 
 set bell-style none
-set editing-mode vi
+set editing-mode emacs
 
 set mark-symlinked-directories on
 
@@ -11,9 +11,15 @@ set show-all-if-ambiguous on
 
 set page-completions off
 
+set colored-completion-prefix on
+set colored-stats on
+
 # Enable UTF-8 support
 set input-meta on
 set output-meta on
 
 "\e[A": history-search-backward
 "\e[B": history-search-forward
+
+"\e[1;5C": forward-word
+"\e[1;5D": backward-word

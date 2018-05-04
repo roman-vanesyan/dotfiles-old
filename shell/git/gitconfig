@@ -37,7 +37,7 @@
 [include]
     path = ~/.gitconfig.local # local configs
 
-[url "git@bitbucket.org"]
+[url "git@bitbucket.org:"]
     insteadOf = bitbucket:
     pushInsteadOf = git://bitbucket.org/
     pushInsteadOf = https://bitbucket.org/
